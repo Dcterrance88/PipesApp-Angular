@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -18,6 +19,13 @@ export class NoComunesComponent {
     edad: 29,
     direccion: 'Bogotá, Colombia'
   }
+  // Async Pipe
+  public miObservable = interval(1000); // 0,1,2,3,4,5,6...
+  public valorPromesa = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('pasaron 8 segundos, ejecutando Promesa')
+    }, 8000);
+  });
   //JsonPipe
   public heroes = [
     {

@@ -58,6 +58,20 @@
     </p-fieldset>
   </div>
 
-  
+  <div class="p-col p-md-6 p-sm-9">
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      <strong>'miObservable | async'</strong>
+      <pre>{{ miObservable | async }}</pre>
+      <hr>
+      <strong *ngIf="!(valorPromesa | async); else elseBlock">'!(valorPromesa | async)'</strong>
+      <ng-template #elseBlock>
+        <strong>
+          'valorPromesa | async'
+        </strong>
+      </ng-template>
+      <pre *ngIf="!(valorPromesa | async)">Resolviendo promesa</pre>
+      <pre>{{ valorPromesa | async }}</pre>
+    </p-fieldset>
+  </div>
 
 </div>
