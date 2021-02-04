@@ -11,19 +11,31 @@ export class NoComunesComponent {
   public nombre: string = 'terrance';
   public genero: string = 'masculino';
   //i18nPlural
-  public clientes: string[] = ['Juan', 'carlos', 'luis', 'maria'];
+  public clientes: string[] = ['Juan', 'carlos', 'luis', 'maria', 'manuel'];
 
   //i18nSelect
-  invitacionMapa = {
+  public invitacionMapa = {
     'masculino': 'invitarlo',
     'femenino': 'invitarla'
   }
 
   //i18nPlural
-  clientesMapa = {
+  public clientesMapa = {
     '=0': 'no tenemos ningún cliente esperando.',
     '=1' : 'tenemos un cliente esperando.',
     '=2' : 'tenemos dos clientes esperando.',
     'other': 'tenemos # clientes esperando.'
+  }
+
+  public cambiarCliente(){
+    this.nombre = (this.nombre === 'terrance')? 'susana': 'terrance';
+    this.genero = (this.genero === 'masculino') ? 'femenino': 'masculino';
+  }
+
+  public borrarCliente(){
+    console.log('hola')
+    if(this.clientes.length>=0){
+      this.clientes.pop();
+    }
   }
 }
