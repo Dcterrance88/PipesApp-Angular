@@ -12,6 +12,12 @@ export class NoComunesComponent {
   public genero: string = 'masculino';
   //i18nPlural
   public clientes: string[] = ['Juan', 'carlos', 'luis', 'maria', 'manuel'];
+  //KeyValuePipe
+  public persona = {
+    nombre: 'terrance',
+    edad: 29,
+    direccion: 'Bogotá, Colombia'
+  }
 
   //i18nSelect
   public invitacionMapa = {
