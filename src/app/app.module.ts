@@ -1,13 +1,17 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { LOCALE_ID, NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+//Modulos personalizado
 import { AppRouterModule } from './app-router.module';
-
 import { SharedModule } from './shared/shared.module';
 import { VentasModule } from './ventas/ventas.module';
 
+//cambiar el locale de la app
+import localeEsCo from '@angular/common/locales/es-CO';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData( localeEsCo );
 
 
 
@@ -21,7 +25,9 @@ import { VentasModule } from './ventas/ventas.module';
     SharedModule,
     VentasModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es-CO' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
