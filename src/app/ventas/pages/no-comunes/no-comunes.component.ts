@@ -18,6 +18,21 @@ export class NoComunesComponent {
     edad: 29,
     direccion: 'Bogotá, Colombia'
   }
+  //JsonPipe
+  public heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true,
+    },
+    {
+      nombre: 'Robin',
+      vuela: false,
+    },
+    {
+      nombre: 'Acuaman',
+      vuela: false,
+    }
+  ]
 
   //i18nSelect
   public invitacionMapa = {
