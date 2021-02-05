@@ -30,3 +30,9 @@ en este proyecto se trataran los siguientes temas
     - PrimeNG
 
 - Módulo especializado para módulos de PrimeNG
+
+- Pipes personalizados
+
+- Argumentos hacia los Pipes
+
+- SortableTable manual y usando PrimeNg
